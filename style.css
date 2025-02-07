@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.navbar {
+    background-color: #ffde59;
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.auth .btn {
+    background-color: black;
+    color: #ffde59;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.auth .btn:hover {
+    background-color: #ffb400;
+}
+
+.input-bar {
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #e0e0e0; 
+    padding: 0 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-bar:focus {
+    outline: none;
+    border-color: #ffde59;
+    background-color: #fff;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.text-align {
+    color: #ffde59;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about, .offers, .contact {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2, .offers h2, .contact h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+}
+
+.offers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.offers li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.offers li strong {
+    color: #ffde59;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+.contact a {
+    color: #ffde59;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
