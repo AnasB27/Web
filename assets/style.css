@@ -142,9 +142,12 @@ body {
     text-align: center;
 }
 
-.text-center a {
-    color: black;
+
+
+.yellow-text {
+    color: #ffde59;
 }
+
 
 .label {
     margin-left: 17%;
@@ -200,11 +203,58 @@ body {
     margin-top: 30px;
 }
 
+/* Import d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
 .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ffde59;
-    color: white;
-    padding: 20px 40px;
+    padding: 15px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titre {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+.nav-links {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.nav-links .active {
+    font-weight: 600;
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 .auth {
@@ -213,26 +263,30 @@ body {
     gap: 15px;
 }
 
-.auth a {
+.auth-link:hover {
     color: black;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
 }
 
-.auth .btn {
+.auth-btn {
     background-color: black;
-    color: #ffde59;
+    color: white;
     padding: 10px 20px;
     border-radius: 25px;
-    text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.auth .btn:hover {
-    background-color: #ffb400;
+.auth-btn a{
+    color: white;
+    text-decoration: none;
 }
+
+.auth-btn:hover {
+    background-color: #424242;
+    transform: scale(1.05);
+}
+
 
 .input-bar {
     width: 100%;
@@ -332,6 +386,13 @@ body {
     font-size: 14px;
     margin-top: 40px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#bottom-fix {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .insc-main {
