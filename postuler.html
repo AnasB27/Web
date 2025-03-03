@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postuler à une offre de stage</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>CESI TA CHANCE</header>
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a class="nav-lien" href="#">Accueil</a>
+        </li>
+        <li>
+          <a class="nav-lien" href="#">Entreprises</a>
+        </li>
+        <li>
+          <a class="nav-lien" href="#">Offres</a>
+        </li>
+        <li>
+          <a class="nav-lien" href="#">Wishlist</a>
+        </li>
+        <li>
+          <a class="nav-lien" href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="connexion">
+        <a class="connecte" href="#">Connexion</a>
+        <a class="inscrire" href="#">S'inscrire</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Postuler à une offre de stage</h1>
+      <p>
+        Vous pouvez répondre directement à l'offre de stage qui a été déposée
+        par l'entreprise. Pour cela, veuillez remplir le formulaire ci-dessous.
+      </p>
+
+      <h2>Offre de Stage - Développeur Web Full Stack H/F</h2>
+      <div class="sous-texte">
+        <div>Société Générale</div>
+        <div class="ligne"></div>
+        <div>Paris - 72</div>
+        <div class="ligne"></div>
+        <div>Publiée le 30/01/2025</div>
+        <div class="ligne"></div>
+        <div>Ref.STG-DEVWEB-2025</div>
+      </div>
+
+      <h3>Résumé de l'offre</h3>
+      <div class="demande">
+        <div class="demande-badge">4 mois</div>
+        <div class="demande-badge">Bac+2, Bac+3</div>
+        <div class="demande-badge">Web</div>
+        <div class="demande-badge">Développement</div>
+        <div class="demande-badge">Stage</div>
+      </div>
+
+      <form>
+        <label class="titre-section" for="civilite">Civilité</label>
+        <select id="civilite" name="civilite">
+          <option value="madame">Madame</option>
+          <option value="monsieur">Monsieur</option>
+        </select>
+
+        <label class="titre-section" for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label class="titre-section" for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required />
+
+        <label class="titre-section" for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label class="titre-section" for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" required />
+
+        <label class="titre-section" for="message">Lettre de motivation</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label class="titre-section" for="cv">CV</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx,.odt,.rtf,.jpg,.png" />
+        <p style="font-size: 0.9em; color: rgb(236, 221, 52); margin-top: 5px">
+          Taille maximale : 2 Mo (formats acceptés : .pdf, .doc, .docx, .odt, .rtf, .jpg, .png)
+        </p>
+
+        <button type="submit">Postuler</button>
+        <button type="reset">Réinitialiser</button>
+      </form>
+
+      <div class="bottom">
+        <p>
+          En cliquant sur "Postuler", vous acceptez les <a href="#">CGU</a> et
+          déclarez avoir pris connaissance de la
+          <a href="#">politique de protection des données</a> de notre site.
+        </p>
+      </div>
+    </div>
+    <footer>&copy; 2024 CESI ta chance. Tous droits réservés.</footer>
+  </body>
+</html>
