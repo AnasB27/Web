@@ -213,7 +213,7 @@ footer {
 }
 
 .offer {
-  border: 2px solid #ff9100;
+  border: 2px solid #525151;
   border-radius: 10px;
   padding: 15px;
   width: 300px;
@@ -222,16 +222,48 @@ footer {
   background-color: #f9f9f9;
 }
 
+.offer-wishlist {
+  border: 2px solid #565353;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.temp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .apply-button {
   display: inline-block;
-  margin-top: 10px;
+
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #252525;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .apply-button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
+}
+
+
+.star {
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 0.3px black;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .star {
+  color: gold;
 }
