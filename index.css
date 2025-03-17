@@ -4,11 +4,11 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff9c4; 
+  background-color: #fff9c4;
 }
 
 header {
-  color: #fdd835; 
+  color: #fdd835;
   padding: 20px 0;
   font-size: 45px;
   font-weight: 600;
@@ -17,11 +17,11 @@ header {
 
 nav {
   color: #fff;
-  background-color: #fdd835; 
+  background-color: #fdd835;
   padding: 10px;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
   margin-bottom: 40px;
@@ -43,22 +43,22 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  font-size: 12px; 
+  font-size: 12px;
   font-weight: 600;
-  padding: 8px 10px; 
+  padding: 8px 10px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links a:hover {
-  background-color: #fbc02d; 
-  color: #fff9c4; 
+  background-color: #fbc02d;
+  color: #fff9c4;
   border-radius: 5px;
 }
- 
+
 .connexion {
   display: flex;
   flex-direction: row;
-  gap: 5px; 
+  gap: 5px;
   transition: transform 1s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -66,14 +66,14 @@ nav {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  font-size: 12px; 
-  padding: 8px 10px; 
+  font-size: 12px;
+  padding: 8px 10px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .connexion a:hover {
-  background-color: #fbc02d; /
+  background-color: #fbc02d;/
 }
 
 .ligne {
@@ -95,7 +95,7 @@ nav {
 
 h1 {
   font-size: 30px;
-  color: #fdd835; 
+  color: #fdd835;
   text-align: center;
 }
 
@@ -144,7 +144,7 @@ label {
 
 .titre-section {
   font-size: 14px;
-  color: #fdd835; 
+  color: #fdd835;
   font-weight: 500;
 }
 
@@ -159,7 +159,7 @@ button {
 }
 
 button {
-  background-color: #fdd835; 
+  background-color: #fdd835;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -168,7 +168,7 @@ button {
 }
 
 button:hover {
-  background-color: #fbc02d; 
+  background-color: #fbc02d;
 }
 
 .bottom {
@@ -179,7 +179,7 @@ button:hover {
 }
 
 .bottom a {
-  color: #fdd835; 
+  color: #fdd835;
   text-decoration: none;
 }
 
@@ -230,7 +230,8 @@ footer {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
 }
-.wish-company{
+
+.wish-company {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -264,6 +265,10 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .star {
+input[type="checkbox"]:checked+.star {
   color: gold;
+}
+
+.footer-link {
+  color: #000;
 }
