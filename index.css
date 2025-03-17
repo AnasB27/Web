@@ -272,3 +272,23 @@ input[type="checkbox"]:checked+.star {
 .footer-link {
   color: #000;
 }
+
+.auth-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.auth-btn:hover {
+  background-color: #424242;
+  transform: scale(1.05);
+}
