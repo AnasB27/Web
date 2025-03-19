@@ -22,15 +22,15 @@
         </div>
     </nav>
     <div class="container">
-        <h1>Gestion de comptes étudiant</h1>
+        <h1>Gestion de comptes pilotes</h1>
         <section> 
             <form>
                 <input class="input-bar" type="text" id="commentaire" placeholder="Rechercher un compte...">
             </form>
             <ul>
                 <li><div class="profile">
-                    <h3>Alex Dupont</h3>
-                    <small>alex.dupont@student.univ-exemple.edu | 2025102345 </small>
+                    <h3>Antoine Dubois</h3>
+                    <small>antoine.dubois@pilot.airways-exemple.com | 20251001 </small>
                     <div class="right">
                     <button class="delete-button" id="openModalDeleteA" >Supprimer</button>  
                     <button class="edit-button" id="openModalEditA">Modifier</button></div>
@@ -38,7 +38,7 @@
                 <div id="modalDeleteA" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalDeleteA">&times</span>
-                        <h3>Voulez-vous vraiment supprimer le compte de : Alex Dupont ?</h3>
+                        <h3>Voulez-vous vraiment supprimer le compte de : Antoine Dubois ?</h3>
                         
                         <!-- Actions sur les boutons -->
                         <button class="delete-button"  >Oui</button>  
@@ -47,7 +47,7 @@
                 <div id="modalEditA" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalEditA">&times</span>
-                        <h2>Modifier le compte de : Alex Dupont</h2>
+                        <h2>Modifier le compte de : Antoine Dubois</h2>
                         <form class="form">
                             <label for="name">Nom</label>
                             <input type="text" id="name" >
@@ -55,8 +55,7 @@
                             <label for="firstname">Prénom</label>
                             <input type="text" id="firstname" >
             
-                            <label for="email">Email</label>
-                            <input type="email" id="email" >
+
                             
     
                             <button type="submit">Modifier</button>
@@ -65,8 +64,8 @@
                 </div>
 
                 <li><div class="profile">
-                    <h3>Sarah Morel</h3>
-                    <small>sarah.morel@student.univ-exemple.edu | 2025116789 </small>
+                    <h3>Sébastien Renault</h3>
+                    <small>sebastien.renault@pilot.airways-exemple.com | 20251127 </small>
                     <div class="right">
                     <button class="delete-button" id="openModalDeleteS">Supprimer</button>  
                     <button class="edit-button" id="openModalEditS">Modifier</button></div>
@@ -74,7 +73,7 @@
                 <div id="modalDeleteS" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalDeleteS">&times</span>
-                        <h3>Voulez-vous vraiment supprimer le compte de : Sarah Morel ?</h3>
+                        <h3>Voulez-vous vraiment supprimer le compte de : Sébastien Renault ?</h3>
                         
                         <!-- Actions sur les boutons -->
                         <button class="delete-button"  >Oui</button>  
@@ -83,7 +82,7 @@
                 <div id="modalEditS" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalEditS">&times</span>
-                        <h2>Modifier le compte de : Sarah Morel</h2>
+                        <h2>Modifier le compte de : Sébastien Renault</h2>
                         <form class="form">
                             <label for="name">Nom</label>
                             <input type="text" id="name" >
@@ -91,8 +90,7 @@
                             <label for="firstname">Prénom</label>
                             <input type="text" id="firstname" >
             
-                            <label for="email">Email</label>
-                            <input type="email" id="email" >
+
                             
     
                             <button type="submit">Modifier</button>
@@ -102,8 +100,8 @@
 
 
                 <li><div class="profile">
-                    <h3>Julien Bernard</h3>
-                    <small>julien.bernard@student.univ-exemple.edu | 2025093456 </small>
+                    <h3>Julien Moreau</h3>
+                    <small>julien.moreau@pilot.airways-exemple.com | 20250914 </small>
                     <div class="right">
                     <button class="delete-button" id="openModalDeleteJ">Supprimer</button>  
                     <button class="edit-button" id="openModalEditJ">Modifier</button></div>
@@ -111,7 +109,7 @@
                 <div id="modalDeleteJ" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalDeleteJ">&times</span>
-                        <h3>Voulez-vous vraiment supprimer le compte de : Julien Bernard ?</h3>
+                        <h3>Voulez-vous vraiment supprimer le compte de : Julien Moreau ?</h3>
                         
                         <!-- Actions sur les boutons -->
                         <button class="delete-button"  >Oui</button>  
@@ -120,7 +118,7 @@
                 <div id="modalEditJ" class="modal">
                     <div class="modal-content">
                         <span class="pop-up" id="closeModalEditJ">&times</span>
-                        <h2>Modifier le compte de : Julien Bernard</h2>
+                        <h2>Modifier le compte de : Julien Moreau</h2>
                         <form class="form">
                             <label for="name">Nom</label>
                             <input type="text" id="name" >
@@ -128,8 +126,7 @@
                             <label for="firstname">Prénom</label>
                             <input type="text" id="firstname" >
             
-                            <label for="email">Email</label>
-                            <input type="email" id="email" >
+
                             
     
                             <button type="submit">Modifier</button>
@@ -138,7 +135,7 @@
                 </div>
 
             </ul>
-            <button class="button" id="openModalNew">Créer un compte étudiant</button>
+            <button class="button" id="openModalNew">Créer un compte pilote</button>
             <div id="modalNew" class="modal">
                 <div class="modal-content">
                     <span class="pop-up" id="closeModalNew">&times</span>
@@ -150,8 +147,7 @@
                         <label for="firstname">Prénom</label>
                         <input type="text" id="firstname" required>
         
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
+
                         
 
                         <button type="submit">Inscrire</button>
