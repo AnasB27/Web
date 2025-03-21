@@ -7,7 +7,7 @@ body {
   background-color: #fff9c4;
 }
 
-header {
+h1 {
   color: #fdd835;
   padding: 20px 0;
   font-size: 45px;
@@ -83,6 +83,12 @@ nav {
   border-radius: 20px;
   margin: 0 10px;
 }
+
+img{
+  width: 50px;
+  height: auto;
+}
+
 
 .container {
   max-width: 800px;
