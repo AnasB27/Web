@@ -1,76 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internshiped</title>
-    <link rel="stylesheet" href="../header/header.css">
-    <link rel="stylesheet" href="../assets/index.css">
+    <title>Gestion des offres de stage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        <h1>INTERNSHIPED</h1>
+        <h1>Gestion des offres de stage</h1>
         <nav>
-            <ul class="nav-links">
-                <li><a class="nav-lien" href="index.html">Accueil</a></li>
-                <li><a class="nav-lien" href="entreprises.html">Entreprises</a></li>
-                <li><a class="nav-lien" href="offres.html">Offres</a></li>
-                <li><a class="nav-lien" href="wishlist.html">Wishlist</a></li>
-                <li><a class="nav-lien" href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="#search-offer">Rechercher une offre</a></li>
+                <li><a href="#create-offer">Créer une offre</a></li>
+                <li><a href="#modify-offer">Modifier une offre</a></li>
+                <li><a href="#delete-offer">Supprimer une offre</a></li>
+                <li><a href="#stats-offer">Statistiques</a></li>
             </ul>
-            <div class="connexion">
-                <a href="connexion.html">Connexion</a>
-                <a href="inscription.html">S'inscrire</a>
-            </div>
         </nav>
     </header>
-    <main>
-        <div class="container">
-            <h1>Découvrez nos offres de stage</h1>
-            <p>Trouvez le stage idéal parmi nos nombreuses offres.</p>
-            <div class="offers">
 
-                <div class="offer">
-                    <h2>Stage Développeur Web
-                        <input type="checkbox" id="star-dev">
-                        <label for="star-dev" class="star">★</label>
-                    </h2>
-                    <p>Entreprise : TechCorp</p>
-                    <p>Lieu : Paris, France</p>
-                    <p>Durée : 6 mois</p>
-                    <a class="apply-button" href="#">Postuler</a>
-                </div>
-                <div class="offer">
-                    <h2>Stage Marketing Digital
-                        <input type="checkbox" id="star-market">
-                        <label for="star-market" class="star">★</label>
-                    </h2>
-                    <p>Entreprise : MarketPlus</p>
-                    <p>Lieu : Lyon, France</p>
-                    <p>Durée : 4 mois</p>
-                    <a class="apply-button" href="#">Postuler</a>
-                </div>
-                <div class="offer">
-                    <h2>Stage Data Analyst
-                        <input type="checkbox" id="star-data">
-                        <label for="star-data" class="star">★</label>
-                    </h2>
-                    <p>Entreprise : DataSolutions</p>
-                    <p>Lieu : Toulouse, France</p>
-                    <p>Durée : 5 mois</p>
-                    <a class="apply-button" href="#">Postuler</a>
-                </div>
-            </div>
-        </div>
+    <main>
+        <!-- Section pour rechercher et afficher une offre -->
+        <section id="search-offer">
+            <h2>Rechercher une offre</h2>
+            <form id="search-form">
+                <label for="search-input">Rechercher par titre, entreprise ou compétence :</label>
+                <input type="text" id="search-input" placeholder="Exemple : Développeur Web" required>
+                <button type="submit">Rechercher</button>
+            </form>
+            <div id="search-results" class="results-container"></div>
+        </section>
+
+        <!-- Section pour créer une offre -->
+        <section id="create-offer">
+            <h2>Créer une offre</h2>
+            <form id="create-offer-form">
+                <label for="offer-title">Titre de l'offre :</label>
+                <input type="text" id="offer-title" placeholder="Exemple : Développeur Frontend" required>
+
+                <label for="offer-description">Description de l'offre :</label>
+                <textarea id="offer-description" placeholder="Décrivez l'offre en détail..." required></textarea>
+
+                <label for="offer-company">Entreprise :</label>
+                <input type="text" id="offer-company" placeholder="Exemple : TechCorp" required>
+
+                <label for="offer-skills">Compétences requises :</label>
+                <input type="text" id="offer-skills" placeholder="Exemple : HTML, CSS, JavaScript" required>
+
+                <label for="offer-salary">Base de rémunération (€) :</label>
+                <input type="number" id="offer-salary" placeholder="Exemple : 1500" min="0" required>
+
+                <label for="offer-start-date">Date de début :</label>
+                <input type="date" id="offer-start-date" required>
+
+                <label for="offer-end-date">Date de fin :</label>
+                <input type="date" id="offer-end-date" required>
+
+                <button type="submit">Créer l'offre</button>
+            </form>
+        </section>
+
+        <!-- Section pour modifier une offre -->
+        <section id="modify-offer">
+            <h2>Modifier une offre</h2>
+            <form id="modify-offer-form">
+                <label for="modify-offer-id">ID de l'offre à modifier :</label>
+                <input type="number" id="modify-offer-id" placeholder="Exemple : 1" min="1" required>
+
+                <label for="modify-offer-title">Nouveau titre :</label>
+                <input type="text" id="modify-offer-title" placeholder="Exemple : Développeur Fullstack">
+
+                <label for="modify-offer-description">Nouvelle description :</label>
+                <textarea id="modify-offer-description" placeholder="Décrivez les modifications..."></textarea>
+
+                <label for="modify-offer-company">Nouvelle entreprise :</label>
+                <input type="text" id="modify-offer-company" placeholder="Exemple : Innovatech">
+
+                <label for="modify-offer-skills">Nouvelles compétences :</label>
+                <input type="text" id="modify-offer-skills" placeholder="Exemple : React, Node.js">
+
+                <label for="modify-offer-salary">Nouvelle base de rémunération (€) :</label>
+                <input type="number" id="modify-offer-salary" placeholder="Exemple : 2000" min="0">
+
+                <label for="modify-offer-start-date">Nouvelle date de début :</label>
+                <input type="date" id="modify-offer-start-date">
+
+                <label for="modify-offer-end-date">Nouvelle date de fin :</label>
+                <input type="date" id="modify-offer-end-date">
+
+                <button type="submit">Modifier l'offre</button>
+            </form>
+        </section>
+
+        <!-- Section pour supprimer une offre -->
+        <section id="delete-offer">
+            <h2>Supprimer une offre</h2>
+            <form id="delete-offer-form">
+                <label for="delete-offer-id">ID de l'offre à supprimer :</label>
+                <input type="number" id="delete-offer-id" placeholder="Exemple : 1" min="1" required>
+                <button type="submit">Supprimer l'offre</button>
+            </form>
+        </section>
+
+        <!-- Section pour consulter les statistiques -->
+        <section id="stats-offer">
+            <h2>Statistiques des offres</h2>
+            <div id="stats-results" class="results-container"></div>
+        </section>
     </main>
+
     <footer>
-        &copy; 2025 CESI Ton Avenir. Tous droits réservés. |&nbsp;
-        <a href="mentions.html" class="footer-link"> Mentions légales</a>
+        <p>&copy; 2023 Gestion des offres de stage</p>
     </footer>
 
-
+    <script src="script.js"></script>
 </body>
-
 </html>
+
+
