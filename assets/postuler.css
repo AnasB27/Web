@@ -1,0 +1,117 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: #fdd835;
+    text-align: center;
+  }
+  
+  h3 {
+    margin: 20px 0 5px 0;
+  }
+
+  .sous-texte {
+    color: #777;
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+  }
+
+  .ligne {
+    width: 1.5px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 10px;
+  }
+
+  .sous-texte .ligne {
+    background-color: #555;
+    width: 1.1px;
+  }
+
+  .demande {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .demande-badge {
+    display: block;
+    padding: 2px;
+    border: solid 1px #000;
+    border-radius: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .titre-section {
+    font-size: 14px;
+    color: #fdd835;
+    font-weight: 500;
+  }
+
+  input,
+  select{
+  width: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #fdd835;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button:hover {
+    background-color: #fbc02d;
+  }
+
+  .bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .bottom a {
+    color: #fdd835;
+    text-decoration: none;
+  }
+  
+  .bottom a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .footer-link {
+    color: #000;
+  }
