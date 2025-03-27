@@ -1,0 +1,73 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input{
+  width: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h3 {
+    margin: 20px 0 5px 0;
+  }
+
+  .offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .offer-wishlist {
+    border: 2px solid #565353;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .wish-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .apply-button {
+    display: inline-block;
+  
+    padding: 10px 15px;
+    background-color: #252525;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .apply-button:hover {
+    background-color: #000000;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .footer-link {
+    color: #000;
+  }
