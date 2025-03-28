@@ -1,68 +1,87 @@
--- Création de la base de données
-CREATE DATABASE Projet;
-USE Projet;
+CREATE DATABASE JobApplicationDB;
+USE JobApplicationDB;
 
--- Table des utilisateurs (administrateurs, étudiants, pilotes)
-CREATE TABLE Utilisateurs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
-    prenom VARCHAR(100) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    mot_de_passe VARCHAR(255) NOT NULL,
-    role ENUM('administrateur', 'etudiant', 'pilote') NOT NULL
+CREATE TABLE User (
+    user_ID INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20)
 );
 
--- Table des entreprises
-CREATE TABLE Entreprises (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(255) NOT NULL,
+CREATE TABLE Company (
+    company_ID INT AUTO_INCREMENT PRIMARY KEY,
+    company_name VARCHAR(100),
+    company_description TEXT
+);
+
+CREATE TABLE Offer (
+    offer_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(100),
     description TEXT,
-    email_contact VARCHAR(255),
-    telephone_contact VARCHAR(20)
+    skills TEXT,
+    start_date DATE,
+    end_date DATE,
+    base_remuneration DECIMAL(10,2),
+    company_ID INT,
+    FOREIGN KEY (company_ID) REFERENCES Company(company_ID)
 );
 
--- Table des offres de stage
-CREATE TABLE Offres (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    entreprise_id INT NOT NULL,
-    titre VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
-    competences TEXT NOT NULL,
-    remuneration DECIMAL(10,2),
-    date_debut DATE,
-    date_fin DATE,
-    FOREIGN KEY (entreprise_id) REFERENCES Entreprises(id) ON DELETE CASCADE
+CREATE TABLE Application (
+    application_ID INT AUTO_INCREMENT PRIMARY KEY,
+    application_date DATE,
+    cv TEXT,
+    cover_letter TEXT,
+    user_ID INT,
+    offer_ID INT,
+    FOREIGN KEY (user_ID) REFERENCES User(user_ID),
+    FOREIGN KEY (offer_ID) REFERENCES Offer(offer_ID)
 );
 
--- Table des candidatures
-CREATE TABLE Candidatures (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    etudiant_id INT NOT NULL,
-    offre_id INT NOT NULL, 
-    date_candidature TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    cv TEXT NOT NULL,
-    lettre_motivation TEXT NOT NULL,
-    FOREIGN KEY (etudiant_id) REFERENCES Utilisateurs(id) ON DELETE CASCADE,
-    FOREIGN KEY (offre_id) REFERENCES Offres(id) ON DELETE CASCADE
+CREATE TABLE Evaluation (
+    ID_evaluation INT AUTO_INCREMENT PRIMARY KEY,
+    note INT CHECK (note BETWEEN 0 AND 10),
+    comment TEXT,
+    application_ID INT,
+    FOREIGN KEY (application_ID) REFERENCES Application(application_ID)
 );
 
--- Table des évaluations des entreprises
-CREATE TABLE Evaluations (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    entreprise_id INT NOT NULL,
-    etudiant_id INT NOT NULL,
-    note INT NOT NULL,
-    commentaire TEXT,
-    FOREIGN KEY (entreprise_id) REFERENCES Entreprises(id) ON DELETE CASCADE,
-    FOREIGN KEY (etudiant_id) REFERENCES Utilisateurs(id) ON DELETE CASCADE,
-    CONSTRAINT chk_note CHECK (note BETWEEN 1 AND 5)
+CREATE TABLE Wishlist (
+    user_ID INT,
+    offer_ID INT,
+    PRIMARY KEY (user_ID, offer_ID),
+    FOREIGN KEY (user_ID) REFERENCES User(user_ID),
+    FOREIGN KEY (offer_ID) REFERENCES Offer(offer_ID)
 );
 
--- Table des wish-lists
-CREATE TABLE WishList (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    etudiant_id INT NOT NULL,
-    offre_id INT NOT NULL,
-    FOREIGN KEY (etudiant_id) REFERENCES Utilisateurs(id) ON DELETE CASCADE,
-    FOREIGN KEY (offre_id) REFERENCES Offres(id) ON DELETE CASCADE
+CREATE TABLE Send (
+    user_ID INT,
+    application_ID INT,
+    PRIMARY KEY (user_ID, application_ID),
+    FOREIGN KEY (user_ID) REFERENCES User(user_ID),
+    FOREIGN KEY (application_ID) REFERENCES Application(application_ID)
+);
+
+CREATE TABLE Receive (
+    application_ID INT,
+    offer_ID INT,
+    PRIMARY KEY (application_ID, offer_ID),
+    FOREIGN KEY (application_ID) REFERENCES Application(application_ID),
+    FOREIGN KEY (offer_ID) REFERENCES Offer(offer_ID)
+);
+
+CREATE TABLE Post (
+    company_ID INT,
+    offer_ID INT,
+    PRIMARY KEY (company_ID, offer_ID),
+    FOREIGN KEY (company_ID) REFERENCES Company(company_ID),
+    FOREIGN KEY (offer_ID) REFERENCES Offer(offer_ID)
+);
+
+CREATE TABLE ReadTable (
+    evaluation_ID INT,
+    company_ID INT,
+    PRIMARY KEY (evaluation_ID, company_ID),
+    FOREIGN KEY (evaluation_ID) REFERENCES Evaluation(ID_evaluation),
+    FOREIGN KEY (company_ID) REFERENCES Company(company_ID)
 );
