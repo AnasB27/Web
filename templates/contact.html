@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Stage Search</title>
+    <link rel="stylesheet" href="../assets/contact.css">
+    <link rel="stylesheet" href="../header/header.css">
+</head>
+<body>
+    <header>
+    <h1>INTERNSHIPED</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-lien" href="../templates/index.html.twig">Accueil</a></li>
+                <li><a class="nav-lien" href="../templates/gestion-entreprise.html.twig">Entreprises</a></li>
+                <li><a class="nav-lien" href="../templates/offres.html.twig">Offres</a></li>
+                <li><a class="nav-lien" href="../templates/wishlist.html.twig">Wishlist</a></li>
+                <li><a class="nav-lien" href="../templates/contact.html.twig">Contact</a></li>
+            </ul>
+            <div class="connexion">
+                <a href="../templates/connexion.html.twig">Connexion</a>
+                <a href="../templates/inscription.html.twig">S'inscrire</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="align">
+        <div class="contact-form">
+            <h2>Contactez-nous</h2>
+            <p>Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.</p>
+
+            <form action="submit_contact.php" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stage Search. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block styles}
+<link rel="stylesheet" href="../assets/contact.css">
+{ % endblock %}
+
+    {% block content %}
+       <div class="align">
+        <div class="contact-form">
+            <h2>Contactez-nous</h2>
+            <p>Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.</p>
+
+            <form action="submit_contact.php" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+

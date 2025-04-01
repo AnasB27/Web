@@ -6,12 +6,16 @@
 
     {% block content %}
        <div class="container">
+            <h1>Connexion</h1>
+            <form method="post">
+                <label class="titre-section" for="user">Identifiant/Adresse Mail</label>
+                <input id="user" class="text" name="user" type="text" size="30" required>
+                <label class="titre-section" for="password">Mot de passe</label>
+                <input id="password" name="password" type="password" size="30" required>
+                <button class="connexion-button" type="submit">Connexion</button>
+            </form>
             <div class="text-center">
-                <h1>Vous êtes déconnecté</h1>
-                <p>Vous avez été déconnecté avec succès. Vous pouvez vous reconnecter en cliquant sur le bouton
-                    ci-dessous.
-                </p>
-                <a href="../templates/connexion.html.twig" class="auth-btn">Connexion</a>
+                <a href="inscription.html">Pas encore inscrit ?</a>
             </div>
         </div>
     {% endblock %}
