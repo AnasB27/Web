@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+
+{% block styles}
+<link rel="stylesheet" href="../assets/index.css">
+{ % endblock %}
+
+ {% block content %}
+        <div class="container">
+        <h1>Bienvenue sur Internshiped</h1>
+        <section> 
+            <!--Les permissions seront à remettre plus tard pour ne laisser la possibilité qu'aux rôles concernés de pouvoir gérer les comptes-->
+            <a href="gestion-etudiant.html.twig"><button class="button">Gérer les comptes étudiant</button></a>
+            <a href="gestion-pilote.html.twig"><button class="button">Gérer les comptes pilote</button></a>
+
+        </section>
+        <p>Venez saisir la meilleure offre du moment.</p>
+        <div class="image">
+            <img src="image/internshiped.png" alt="Internshiped">
+        </div>
+        <section class="center">
+            <form>
+                <input class="input-bar" type="text" id="commentaire" placeholder="Rechercher une annonce...">
+            </form>
+            <div class="text-align">Des opportunités de stage pour vous</div>
+            <div class="text-align">Des opportunités de stagiaires pour les entreprises</div>
+        </section>
+        <section class="about">
+            <h2>À propos</h2>
+            <p>Bienvenue sur Cesi-ton-avenir, la plateforme qui met en relation les étudiants à la recherche d'un stage et les entreprises à la recherche de talents. Nous vous offrons les outils nécessaires pour trouver l'opportunité parfaite.</p>
+        </section>
+        <section class="offers">
+            <h2>Dernières offres de stage</h2>
+            <ul class="label">
+                <li>Stage en développement web - 6 mois - Paris</li>
+                <li>Stage en marketing digital - 4 mois - Lyon</li>
+                <li>Stage en gestion de projet - 3 mois - Marseille</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Vous avez des questions ? Contactez-nous par email à <a href="mailto:contact@cesi-ton-avenir.com">contact@cesi-ton-avenir.com</a>.</p>
+        </section>
+        
+
+    </div>
+    {% endblock %}
+

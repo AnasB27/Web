@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des entreprises - INTERNSHIPED</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>INTERNSHIPED</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-lien" href="../templates/index.html.twig">Accueil</a></li>
+                <li><a class="nav-lien" href="../templates/entreprises.html.twig">Entreprises</a></li>
+                <li><a class="nav-lien" href="../templates/offres.html.twig">Offres</a></li>
+                <li><a class="nav-lien" href="../templates/wishlist.html.twig">Wishlist</a></li>
+                <li><a class="nav-lien" href="../templates/contact.html.twig">Contact</a></li>
+            </ul>
+            <div class="connexion">
+                <a href="../templates/connexion.html.twig">Connexion</a>
+                <a href="../templates/inscription.html.twig">S'inscrire</a>
+            </div>
+        </nav>
+   
+    <div class="container">
+        <h1>Gestion des entreprises</h1>
+        <section>
+            <form>
+                <input class="input-bar" type="text" id="recherche" placeholder="Rechercher une entreprise...">
+            </form>
+            <ul>
+                <li>
+                    <div class="profile">
+                        <h3>AirTech Solutions</h3>
+                        <small>contact@airtech.com | 123456789 </small>
+                        <div class="right">
+                            <button class="delete-button" id="openModalDeleteA">Supprimer</button>
+                            <button class="edit-button" id="openModalEditA">Modifier</button>
+                        </div>
+                    </div>
+                </li>
+                <div id="modalDeleteA" class="modal">
+                    <div class="modal-content">
+                        <span class="pop-up" id="closeModalDeleteA">&times;</span>
+                        <h3>Voulez-vous vraiment supprimer l'entreprise : AirTech Solutions ?</h3>
+                        <button class="delete-button">Oui</button>
+                        <button class="edit-button">Non</button>
+                    </div>
+                </div>
+                <div id="modalEditA" class="modal">
+                    <div class="modal-content">
+                        <span class="pop-up" id="closeModalEditA">&times;</span>
+                        <h2>Modifier l'entreprise : AirTech Solutions</h2>
+                        <form class="form">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom">
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                            <button type="submit">Modifier</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+            <button class="button" id="openModalNew">Ajouter une entreprise</button>
+            <div id="modalNew" class="modal">
+                <div class="modal-content">
+                    <span class="pop-up" id="closeModalNew">&times;</span>
+                    <h2>Ajouter une entreprise</h2>
+                    <form class="form">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                        <button type="submit">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Vous avez des questions ? Contactez-nous par email à <a
+                    href="mailto:contact@internshiped.com">contact@internshiped.com</a>.</p>
+        </section>
+    </div>
+    <footer>&copy; 2025 INTERNSHIPED. Tous droits réservés.</footer>
+    <script src="assets/pop-up.js"></script>
+</body>
+
+</html>

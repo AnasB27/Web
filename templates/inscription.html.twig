@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block styles}
+<link rel="stylesheet" href="../assets/inscription.css">
+{ % endblock %}
+
+ {% block content %}
+        <div class="container">
+            <h1>Inscription</h1>
+            <form method="post">
+                <label class="titre-section" for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+                <label class="titre-section" for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label class="titre-section" for="email">Adresse email</label>
+                <input type="email" id="email" name="email" required>
+                <label class="titre-section" for="numero">Numéro de téléphone</label>
+                <input type="text" id="numero" name="numero" required>
+                <label class="titre-section" for="mot_de_pass">Mot de passe</label>
+                <input type="password" id="mot_de_pass" name="mot_de_pass" required>
+                <button class="insc-button" type="submit">S'inscrire</button>
+            </form>
+        </div>
+    {% endblock %}
+

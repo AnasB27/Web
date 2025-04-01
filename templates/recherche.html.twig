@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block styles}
+<link rel="stylesheet" href="../assets/recherche.css">
+{ % endblock %}
+
+ {% block content %}
+         <div class="container">
+            <div class="search-bar">
+                <textarea placeholder="Que recherchez-vous?"></textarea>
+                <button>Rechercher</button>
+            </div>
+            <div class="filters">
+                <button>Filtres</button>
+                <button>Durée</button>
+                <button>Contrats</button>
+            </div>
+            <div class="results">
+                <h3>Résultats trouvés...</h3>
+                <div class="job-card">
+                    <div class="logo">Logo de l'entreprise</div>
+                    <div class="job-details">
+                        <h3>Intitulé du poste</h3>
+                        <p>nom de l'entreprise</p>
+                        <div class="tags">
+                            <div class="tag">Lieu</div>
+                            <div class="tag">Type de contrat</div>
+                        </div>
+                    </div>
+                    <button class="view-offer">Voir offre</button>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+

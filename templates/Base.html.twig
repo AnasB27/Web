@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Stage Search{% endblock %}</title>
-    <link rel="stylesheet" href="/path/to/your/styles.css">
+    <title>{% block title %}<!-- titre -->{% endblock %}</title>
+    <link rel="stylesheet" href="../header/header.css">
+    
+     {% block styles %}{% endblock %}
+
+
 </head>
 <body>
     <header>
-        <nav>
-            <!-- Add navigation links here -->
-        </nav>
+        {% include 'header.html.twig' %}
     </header>
 
     <main>

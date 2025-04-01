@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block styles}
+<link rel="stylesheet" href="../assets/connexion.css">
+{ % endblock %}
+
+    {% block content %}
+       <div class="container">
+            <div class="text-center">
+                <h1>Vous êtes déconnecté</h1>
+                <p>Vous avez été déconnecté avec succès. Vous pouvez vous reconnecter en cliquant sur le bouton
+                    ci-dessous.
+                </p>
+                <a href="../templates/connexion.html.twig" class="auth-btn">Connexion</a>
+            </div>
+        </div>
+    {% endblock %}
+
